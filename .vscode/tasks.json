@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build VS Code Syntax Extension",
+      "type": "shell",
+      "group": "build",
+      "command": "vsce package",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "Install VS Code Syntax Extension",
+      "type": "shell",
+      "group": "build",
+      "command": "code --install-extension zeta-syntax-0.0.1.vsix",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "Build and Install VS Code Syntax Extension",
+      "type": "shell",
+      "group": "build",
+      "problemMatcher": [],
+      "presentation": {
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "dependsOn": [
+        "Build VS Code Syntax Extension",
+        "Install VS Code Syntax Extension",
+      ],
+      "dependsOrder": "sequence",
+    },
+  ]
+}

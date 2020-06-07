@@ -1,0 +1,35 @@
+{
+  "name": "zeta-syntax",
+  "displayName": "Zeta Syntax",
+  "description": "Syntax highlighting extension for the Zeta programming language",
+  "icon": "images/zeta_icon.png",
+  "galleryBanner": {
+    "color": "magenta",
+    "theme": "light"
+  },
+  "version": "0.0.1",
+  "publisher": "zeta-lang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeta-lang"
+  },
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "zeta",
+      "aliases": ["Zeta", "zeta"],
+      "extensions": [".z",".zi" ],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "zeta",
+      "scopeName": "source.zeta",
+      "path": "./syntaxes/zeta.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,8 @@
+alias std::io;
+
+export ns test {
+  export fn main (argc: s32, args: ^^s8) -> s32 {
+    io::printf("{}", args[0]);
+    0
+  }
+}
