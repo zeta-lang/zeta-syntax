@@ -46,7 +46,7 @@
 				},
 				{
 					"name": "storage.type.zeta",
-					"match": "\\b(ns|struct|type|fn|let|alias|global)\\b"
+					"match": "\\b(ns|struct|type|fn|let|alias)\\b"
 				}
 			]
 		},
@@ -115,7 +115,7 @@
 				},
 				{
 					"name": "keyword.operator.zeta",
-					"match": "(^|\\b)(as|not|and|or|xor)($|\\b)"
+					"match": "(^|\\b)(sizeof|alignof|typeof|as|not|and|or|xor)($|\\b)"
 				}
 			]
 		},

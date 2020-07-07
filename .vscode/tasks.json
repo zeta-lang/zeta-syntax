@@ -17,7 +17,7 @@
       "label": "Install VS Code Syntax Extension",
       "type": "shell",
       "group": "build",
-      "command": "code --install-extension zeta-syntax-0.0.1.vsix",
+      "command": "code --install-extension zeta-syntax-0.0.2.vsix",
       "problemMatcher": [],
       "presentation": {
         "panel": "shared",
