@@ -1,8 +1,29 @@
-alias std::io;
+import math
 
-export ns test {
-  export fn main (argc: s32, args: ^^s8) -> s32 {
-    io::printf("{}", args[0]);
-    0
+
+export global a_string: string = "Hello world"
+export global a_number: int = 123
+
+export function fib (n: int) -> int {
+  if n < 2 {
+    n
+  } else {
+    fib(n - 1) + fib(n - 2)
   }
+}
+
+type vec: record {
+  x: float,
+  y: float
+}
+
+export function vec_magnitude (v2: vec) -> float {
+  math::sqrt(v2.x * v2.x + v2.y * v2.y)
+}
+
+export function vec_normalize (v2: vec) {
+  local mag = v2:vec_magnitude()
+
+  v2.x /= mag
+  v2.y /= mag
 }

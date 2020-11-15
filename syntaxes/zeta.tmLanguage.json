@@ -42,11 +42,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.directive.zeta",
-					"match": "\\b(module|import|export)\\b"
+					"match": "\\b(import|export)\\b"
 				},
 				{
 					"name": "storage.type.zeta",
-					"match": "\\b(ns|struct|type|fn|let|alias)\\b"
+					"match": "\\b(record|map|fn|type|function|global|local)\\b"
 				}
 			]
 		},
@@ -115,7 +115,7 @@
 				},
 				{
 					"name": "keyword.operator.zeta",
-					"match": "(^|\\b)(sizeof|alignof|typeof|as|not|and|or|xor)($|\\b)"
+					"match": "(^|\\b)(typeof|as|not|and|or)($|\\b)"
 				}
 			]
 		},
@@ -127,17 +127,12 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.zeta",
-					"match": "(\\\\[\\\\0'\"abefnrtv])|(\\\\[uU]([a-fA-F0-9]{8}|[a-fA-F0-9]{4}))|(\\\\[xX][a-fA-F0-9]{2})"
+					"match": "(\\\\[\\\\0'\"abefnrtv])|(\\\\u\\{[a-fA-F0-9]{1,6}\\})|(\\\\x[a-fA-F0-9]{2})"
 				},
 
 				{
 					"name": "invalid.illegal.escape.zeta",
 					"match": "\\\\[^\\\\0'\"abefnrtv]"
-				},
-		
-				{
-					"name": "constant.other.placeholder.zeta",
-					"match": "\\{|\\}"
 				}
 			]
 		},
@@ -150,7 +145,7 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.zeta",
-					"match": "(\\\\[\\\\0'\"abefnrtv])|(\\\\[uU]([a-fA-F0-9]{8}|[a-fA-F0-9]{4}))|(\\\\[xX][a-fA-F0-9]{2})"
+					"match": "(\\\\[\\\\0'\"abefnrtv])|(\\\\u\\{[a-fA-F0-9]{1,6}\\})|(\\\\x[a-fA-F0-9]{2})"
 				},
 
 				{

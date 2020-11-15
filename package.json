@@ -1,13 +1,13 @@
 {
   "name": "zeta-syntax",
   "displayName": "Zeta Syntax",
-  "description": "Syntax highlighting extension for the Zeta programming language",
+  "description": "Syntax highlighting extension for the Zeta scripting language",
   "icon": "images/zeta_icon.png",
   "galleryBanner": {
     "color": "magenta",
     "theme": "light"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "zeta-lang",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "languages": [{
       "id": "zeta",
       "aliases": ["Zeta", "zeta"],
-      "extensions": [".z",".zi" ],
+      "extensions": [".z",".zs" ],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
