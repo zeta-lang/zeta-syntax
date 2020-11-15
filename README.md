@@ -1,8 +1,8 @@
-<p align=right><img alt="Zeta Logo" src="https://raw.githubusercontent.com/zeta-lang/czeta/master/meta/images/zeta_logo.png" width=25%/></p>
+<p align=right><img alt="Zeta Logo" src="https://raw.githubusercontent.com/zeta-lang/zeta-syntax/master/images/zeta_icon.png" width=25%/></p>
 
 # Zeta Syntax
 
-VS Code syntax highlighting extension for the [Zeta programming language](https://github.com/zeta-lang/czeta)
+VS Code syntax highlighting extension for the [Zeta scripting language](https://github.com/zeta-lang/zeta)
 
 ## Usage
 There are three tasks in the `tasks.json` to facilitate use and development:
