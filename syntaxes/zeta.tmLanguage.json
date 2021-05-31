@@ -23,7 +23,7 @@
 		"line_comments": {
 			"patterns": [ {
 				"name": "comment.line.zeta",
-				"match": "//.*\n"
+				"match": "#.*\n"
 			} ]
 		},
 		"source": {
@@ -35,18 +35,18 @@
 		"controlflow": {
 			"patterns": [ {
 				"name": "keyword.control.zeta",
-				"match": "\\b(if|else|loop|break|continue|return)\\b"
+				"match": "\\b(if|then|else|loop|until|break|continue|return)\\b"
 			} ]
 		},
 		"sections": {
 			"patterns": [
 				{
 					"name": "keyword.control.directive.zeta",
-					"match": "\\b(import|export)\\b"
+					"match": "\\b(import|export|using|module|namespace)\\b"
 				},
 				{
 					"name": "storage.type.zeta",
-					"match": "\\b(record|map|fn|type|function|global|local)\\b"
+					"match": "\\b(record|typealias|usertype)\\b"
 				}
 			]
 		},
@@ -59,20 +59,20 @@
 					"patterns": [ { "include": "#all" } ]
 				},
 				{
-					"name": "punctuation.section.zeta",
+					"name": "keyword.operator.zeta",
 					"begin": "\\[",
 					"end": "\\]",
 					"patterns": [ { "include": "#all" } ]
 				},
 				{
-					"name": "punctuation.section.zeta",
+					"name": "keyword.operator.zeta",
 					"begin": "\\(",
 					"end": "\\)",
 					"patterns": [ { "include": "#all" } ]
 				},
 				{
-					"name": "punctuation.section.zeta",
-					"match": ";|,"
+					"name": "keyword.operator.zeta",
+					"match": ";"
 				}
 			]
 		},
@@ -111,11 +111,11 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.zeta",
-					"match": "=|\\->|\\||&|!|~|\\+|\\-|\\*|/|%|\\$|#|:|<|>|\\."
+					"match": "=|\\->|\\||&|!|\\?|~|,|\\+|\\-|\\*|/|\\\\|%|\\$|:|<|>|\\."
 				},
 				{
 					"name": "keyword.operator.zeta",
-					"match": "(^|\\b)(typeof|as|not|and|or)($|\\b)"
+					"match": "(^|\\b)(typeof|is|as|not|and|or)($|\\b)"
 				}
 			]
 		},

@@ -1,29 +1,17 @@
-import math
+module basic_sema @ 0.0.1
 
+# comment
 
-export global a_string: string = "Hello world"
-export global a_number: int = 123
+export
+	push: int, (int | IntList) -> IntList
+	\ a b =>
+		if b is IntList as b
+			then a, ^b
+			else a, (b, null)
 
-export function fib (n: int) -> int {
-  if n < 2 {
-    n
-  } else {
-    fib(n - 1) + fib(n - 2)
-  }
-}
+export
+	pop: IntList -> int, ? ^IntList
+	\ l => l.0, l.1
 
-type vec: record {
-  x: float,
-  y: float
-}
-
-export function vec_magnitude (v2: vec) -> float {
-  math::sqrt(v2.x * v2.x + v2.y * v2.y)
-}
-
-export function vec_normalize (v2: vec) {
-  local mag = v2:vec_magnitude()
-
-  v2.x /= mag
-  v2.y /= mag
-}
+export usertype
+	IntList: int, ? ^IntList
